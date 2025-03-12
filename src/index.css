@@ -1,0 +1,132 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+  animation: backgroundFade 3s ease-out;
+}
+
+/* Background fade-in animation */
+@keyframes backgroundFade {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* Container to center the form */
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Tax Form Styling */
+.tax-form {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  animation: slideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Form Heading */
+.tax-form h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Fieldset and Legend Styling */
+.tax-form fieldset {
+  border: none;
+  margin-bottom: 30px;
+  padding: 0;
+}
+.tax-form legend {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 5px;
+}
+
+/* Label Styling */
+.tax-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input, Select, and Textarea Styling */
+.tax-form input,
+.tax-form select,
+.tax-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+.tax-form input:focus,
+.tax-form select:focus,
+.tax-form textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+/* Button Styling */
+.tax-form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.tax-form button:hover {
+  background: linear-gradient(90deg, #2980b9, #2471a3);
+  transform: scale(1.03);
+}
+
+/* Consent Section */
+.tax-form .consent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 5px; /* Reduced spacing to bring text closer to checkbox */
+}
+
+/* Success Message Styling */
+.success-message {
+  text-align: center;
+  color: #27ae60;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+/* Pulse Animation for Success Message */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
